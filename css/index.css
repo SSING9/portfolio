@@ -1,0 +1,54 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#section {
+  background: url("../images/background.png") center no-repeat fixed;
+  background-size: cover;
+}
+
+#headerTile {
+  width: 340px;
+  height: 340px;
+  margin: 0 auto;
+  padding: 230px 0 0 120px;
+}
+
+#headerTile .titlebottom {
+  padding-top: 18px;
+}
+
+#wrapR{
+  width: 85%;
+  margin-left: 15%;
+}
+
+#content{
+  width: 100%;
+}
+
+#bin{
+  width: 100%;
+  height: 500px;
+  text-align: right;
+  color: #f7cac9;
+}
+
+#info{
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+}
+
+
+#portfolio{
+  width: 100%;
+  text-align: center;
+  background-color: #333439;
+}
+
+#portfolio > h2, p{
+  color:#fff;
+}
