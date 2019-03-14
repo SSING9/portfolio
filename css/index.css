@@ -3,9 +3,17 @@
   padding: 0px;
 }
 
+#header{
+  position: fixed; top: 50px; left: 50px; z-index: 1;
+}
+
 #section {
   background: url("../images/background.png") center no-repeat fixed;
   background-size: cover;
+}
+
+#scrollBottom{
+  position: absolute; bottom: 5%; left: 50%;
 }
 
 #headerTile {
@@ -19,6 +27,8 @@
   padding-top: 18px;
 }
 
+/* 섹션 시작 메인시작 */
+
 #wrapR{
   width: 85%;
   margin-left: 15%;
@@ -29,6 +39,7 @@
 }
 
 #bin{
+  position: relative; bottom: 100px;
   width: 100%;
   height: 500px;
   text-align: right;
@@ -40,15 +51,29 @@
   text-align: center;
   background-color: #fff;
   color: #000;
+  margin-bottom: 5px;
+}
+
+.testImg1{
+  width: 100%;
+  height:auto;
 }
 
 
 #portfolio{
   width: 100%;
   text-align: center;
-  background-color: #333439;
+  /* background-color: #333439; */
+  background-color: #fff;
 }
 
-#portfolio > h2, p{
-  color:#fff;
+@media (min-width:600px) and (max-width:1023px) {
+  #logoImg{display: none;}
+  #wrapR{width: 100%; margin-left:0;}
+}
+
+@media (max-width:599px){
+  #logoImg{display: none;}
+  #wrapR{width: 100%; margin-left:0;}
+  #headerTile{width: 150px;; height: 150px; padding:0; margin: 0 20%;}
 }
