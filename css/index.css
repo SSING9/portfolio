@@ -1,77 +1,181 @@
+/* 초기화 */
 * {
   margin: 0px;
   padding: 0px;
 }
 
-#header{
-  position: fixed; top: 40px; left: 20px; z-index: 1;
+li {
+  list-style: none;
 }
 
-#section {
+a {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px
+}
+
+body {
   background: url("../images/background.png") center no-repeat fixed;
   background-size: cover;
 }
 
-#scrollBottom{
-  position: absolute; bottom: 5%; left: 50%;
-}
+/* 상단 페이지 시작 */
 
 #headerTile {
-  width: 340px;
-  height: 340px;
-  margin: 0 auto;
-  padding: 230px 0 0 120px;
+  width: 99vw;
+  height: 100vh;
 }
 
-#headerTile .titlebottom {
-  padding-top: 18px;
+#headerTile .titletop {
+  position: relative;
+  left: 52%;
+  top: 40%;
+  transform: translate(-50%, -50%);
 }
+
+
+/* 스크롤 다운 버튼 */
+
+#ScrollDown>p {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#ScrollDown>p:hover{
+  font-weight: bold;
+}
+
+.ScrollDownClick {
+  color: #fff;
+}
+
+#ScrollDownBar {
+  display: block;
+  width: 1px;
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+
 
 /* 섹션 시작 메인시작 */
 
-#wrapR{
-  width: 85%;
-  margin-left: 15%;
+#wrapR {
+  width: 90%;
+  margin: 0 auto;
 }
 
-#content{
-  width: 100%;
+/* 컨텐츠1 */
+
+#info {
+  display: flex;
+  flex-direction: row;
 }
 
-#bin{
-  position: relative; bottom: 100px;
-  width: 100%;
-  height: 500px;
-  text-align: right;
-  color: #f7cac9;
-}
-
-#info{
-  width: 100%;
+#infoL {
+  width: 50%;
+  height: auto;
+  background-color: rgb(240, 236, 235);
   text-align: center;
-  background-color: #fff;
-  color: #000;
-  margin-bottom: 5px;
 }
 
+#infoL h2 {
+  margin: 30px;
+  float: right;
+}
 
-#portfolio{
-  width: 100%;
+#infoL p {
+  width: 80%;
+  height: auto;
+  padding: 20px;
+}
+
+#infoR {
+  width: 50%;
+  height: auto;
+  background-color: rgb(041, 114, 153);
+  color: #fff;
   text-align: center;
-  /* background-color: #333439; */
+}
+
+#infoR h2 {
+  margin: 30px;
+  float: left;
+}
+
+#infoR p {
+  width: 80%;
+  height: auto;
+  padding: 20px;
+}
+
+/* 컨텐츠2 */
+#portfolio {
+  display: flex;
+  flex-direction: row;
+}
+
+#portfolioContent1L {
+  width: 50%;
+  height: auto;
+  background-color: #fff;
+  text-align: center;
+}
+
+#portfolioContent1L img {
+  padding: 30px;
+}
+
+#portfolioContent1R {
+  width: 50%;
+  height: auto;
   background-color: #fff;
 }
 
-@media (min-width:600px) and (max-width:1023px) {
-  #logoImg{display: none;}
-  #wrapR{width: 100%; margin-left:0;}
+#portfolioContent1R h2 {
+  padding: 20px;
 }
 
-@media (max-width:599px){
-  #logoImg{display: none;}
-  #scrollBottom{display: none;}
-  #wrapR{width: 100%; margin-left:0;}
-  #headerTile{width: 150px;; height: 150px; padding:0; padding-top: 100px;}
-  .titletop{width: 150px; height: auto;}
-  .titlebottom{width: 200px; height: auto;}
+@media (min-width:768px) and (max-width:1024px) {
+  #wrapR {
+    width: 100%;
+    margin-left: 0;
+  }
 }
+
+@media (max-width:767px) {
+
+  .titletop {
+    width: 250px;
+    height: auto;
+  }
+
+  #wrapR{
+    width: 100%;
+  }
+
+  #info, #portfolio{
+    display: block;
+  }
+
+  #infoL, #infoR, #portfolioContent1L, #portfolioContent1R{
+    width: 100%
+  }
+
+  #portfolioContent1L img {
+    padding: 0;
+  }
