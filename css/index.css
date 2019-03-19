@@ -26,10 +26,24 @@ body {
   background-size: cover;
 }
 
+@font-face {
+  font-family: NanumSquareEB;
+  src:url("../font/NanumSquareEB.ttf"),
+  url("../font/NanumSquareEB.eot"),
+  url("../font/NanumSquareEB.woff");
+}
+
+@font-face {
+  font-family: NanumBarunGothicSubset;
+  src:url("../font/NanumBarunGothicSubset.ttf"),
+  url("../font/NanumBarunGothicSubset.eot"),
+  url("../font/NanumBarunGothicSubset.woff");
+}
+
 /* 상단 페이지 시작 */
 
 #headerTile {
-  width: 99vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -79,103 +93,111 @@ body {
   margin: 0 auto;
 }
 
+
 /* 컨텐츠1 */
 
 #info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  height: 1515px;
 }
 
-#infoL {
-  width: 50%;
-  height: auto;
-  background-color: rgb(240, 236, 235);
+#info > .about, .skill{
   text-align: center;
+  font-family: NanumSquareEB;
+  font-size: 48px;
+  color: #3c4761;
+  padding: 80px 0 50px 0px;
 }
 
-#infoL h2 {
-  margin: 30px;
-  float: right;
+#line{
+  width: 80px;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #cad8e2;
+  margin-bottom: 50px;
 }
 
-#infoL p {
-  width: 80%;
+#info > .aboutTxt{
+  width: 710px;
   height: auto;
-  padding: 20px;
+  color: #3c4761;
+  position: relative; left: 20%;
+  font-family: NanumBarunGothicSubset;
+  line-height: 28px;
 }
 
-#infoR {
-  width: 50%;
-  height: auto;
-  background-color: rgb(041, 114, 153);
-  color: #fff;
-  text-align: center;
-}
-
-#infoR h2 {
-  margin: 30px;
-  float: left;
-}
-
-#infoR p {
-  width: 80%;
-  height: auto;
-  padding: 20px;
-}
 
 /* 컨텐츠2 */
+
 #portfolio {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  background-color: #ffdd99;
+  width: 100%;
+  height: 1962px;
 }
 
-#portfolioContent1L {
-  width: 50%;
-  height: auto;
-  background-color: #fff;
+#portfolio > .portfolioTitle{
   text-align: center;
+  font-family: NanumSquareEB;
+  font-size: 48px;
+  color: #3c4761;
+  padding: 80px 0 50px 0px;
 }
 
-#portfolioContent1L img {
-  padding: 30px;
+/* 푸터 */
+
+#footer{
+  display: flex;
+  flex-direction: column;
+  background-color: #324e66;
+  width: 100%;
+  height: 580px;
 }
 
-#portfolioContent1R {
-  width: 50%;
+#footer > .contact{
+  text-align: center;
+  font-family: NanumSquareEB;
+  font-size: 48px;
+  color: #fff;
+  padding: 80px 0 50px 0px;
+}
+
+#footer > img{
+  width: 130px;
   height: auto;
-  background-color: #fff;
+  margin: 0 auto;
 }
 
-#portfolioContent1R h2 {
-  padding: 20px;
-}
 
 @media (min-width:768px) and (max-width:1024px) {
+  #headerTile{
+    width: 100%
+  }
+
   #wrapR {
     width: 100%;
-    margin-left: 0;
   }
+
 }
 
+
 @media (max-width:767px) {
+
+  #headerTile{
+    width: 100%
+  }
+
+  #wrapR {
+    width: 100%;
+  }
 
   .titletop {
     width: 250px;
     height: auto;
   }
 
-  #wrapR{
-    width: 100%;
-  }
-
-  #info, #portfolio{
-    display: block;
-  }
-
-  #infoL, #infoR, #portfolioContent1L, #portfolioContent1R{
-    width: 100%
-  }
-
-  #portfolioContent1L img {
-    padding: 0;
-  }
+}
