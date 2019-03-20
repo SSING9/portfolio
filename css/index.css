@@ -425,4 +425,8 @@ body {
     padding: 10px;
   }
 
+  #footer p{
+    font-size: 18px;
+  }
+
 }
