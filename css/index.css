@@ -103,6 +103,7 @@ body {
   background-color: #ffffff;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 #info>.myprofile {
@@ -110,6 +111,11 @@ body {
   margin: 0 auto;
   width: 53vw;
   padding-bottom: 70px;
+  transition: all 0.3s;
+}
+
+.myprofile:hover{
+  transform: scale(1.1);
 }
 
 #info>.about, .skill {
@@ -155,6 +161,11 @@ body {
   position: relative;
   top: 0;
   padding: 40px;
+  transition: all 0.3s;
+}
+
+#myskill>img:hover{
+  transform: scale(1.1);
 }
 
 /* 컨텐츠2 */
@@ -310,25 +321,85 @@ body {
 
 @media (min-width:768px) and (max-width:1024px) {
   #headerTile {
-    width: 100%
+    width: 100%;
   }
 
   #wrapR {
     width: 100%;
+  }
+
+  #info>.myprofile {
+    width: 95%;
+  }
+
+  #info>.aboutTxt {
+    left: 10%;
   }
 }
 
 @media (max-width:767px) {
-  #headerTile {
-    width: 100%
+
+  #topBtnA{
+    display: none;
   }
 
-  #wrapR {
-    width: 100%;
+  #headerTile {
+    width: 100%
   }
 
   .titletop {
     width: 250px;
     height: auto;
   }
+
+  #wrapR {
+    width: 100%;
+  }
+
+  #info>.myprofile {
+    width: 95%;
+  }
+
+  #info>.aboutTxt {
+    left: 0;
+    margin: 15px;
+    justify-content: center;
+  }
+
+  .aboutTxt>h3 {
+    font-size: 20px;
+  }
+
+  .aboutTxt>p {
+    font-size: 16px;
+  }
+
+  #hover, #portfolioContent{
+    width: 100%;
+    height: 510px;
+  }
+
+  #hover:hover .portfolioContentHover{
+    width: 100%;
+    height: 510px;
+  }
+
+  #portfolioContent .portfolioContentTxt1, .portfolioContentTxt2, .portfolioContentTxt3, .portfolioContentTxt4{
+    width: 90%;
+    padding: 10px;
+  }
+
+  .portfolioContentImg >img{
+    width: 50%;
+  }
+
+  #portfolioContent .portfolioContentImg {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  #footerContent .footerContentMail, .footerContentPh {
+    padding: 10px;
+  }
+
 }

@@ -6,7 +6,7 @@ $(document).ready(function() {
       $('#topBtn').fadeIn(500);
     } else {
       $('#topBtn').fadeOut(500);
-    };
+    }
   });
 });
 
