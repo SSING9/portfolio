@@ -28,20 +28,27 @@ body {
 
 @font-face {
   font-family: NanumSquareEB;
-  src:url("../font/NanumSquareEB.ttf"),
-  url("../font/NanumSquareEB.eot"),
-  url("../font/NanumSquareEB.woff");
+  src: url("../font/NanumSquareEB.ttf"),
+    url("../font/NanumSquareEB.eot"),
+    url("../font/NanumSquareEB.woff");
 }
 
 @font-face {
   font-family: NanumBarunGothicSubset;
-  src:url("../font/NanumBarunGothicSubset.ttf"),
-  url("../font/NanumBarunGothicSubset.eot"),
-  url("../font/NanumBarunGothicSubset.woff");
+  src: url("../font/NanumBarunGothicSubset.ttf"),
+    url("../font/NanumBarunGothicSubset.eot"),
+    url("../font/NanumBarunGothicSubset.woff");
 }
 
-/* 상단 페이지 시작 */
 
+/* 탑버튼 */
+
+#topBtn{
+  position: fixed; bottom: 20px; right: 20px;
+}
+
+
+/* 상단 페이지 시작 */
 #headerTile {
   width: 100%;
   height: 100vh;
@@ -54,9 +61,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-
 /* 스크롤 다운 버튼 */
-
 #ScrollDown>p {
   display: block;
   color: #fff;
@@ -66,9 +71,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#ScrollDown>p:hover{
+
+#ScrollDown .ScrollDownClick:hover{
+  color: #ffdd99;
   font-weight: bold;
 }
+
 
 .ScrollDownClick {
   color: #fff;
@@ -84,27 +92,27 @@ body {
   left: 50%;
 }
 
-
-
 /* 섹션 시작 메인시작 */
-
 #wrapR {
   width: 90%;
   margin: 0 auto;
 }
 
-
 /* 컨텐츠1 */
-
 #info {
-  display: flex;
-  flex-direction: column;
   background-color: #ffffff;
   width: 100%;
-  height: 1515px;
+  height: auto;
 }
 
-#info > .about, .skill{
+#info>.myprofile {
+  display: block;
+  margin: 0 auto;
+  width: 53vw;
+  padding-bottom: 70px;
+}
+
+#info>.about, .skill {
   text-align: center;
   font-family: NanumSquareEB;
   font-size: 48px;
@@ -112,7 +120,7 @@ body {
   padding: 80px 0 50px 0px;
 }
 
-#line{
+#line {
   width: 80px;
   height: 4px;
   margin: 0 auto;
@@ -120,27 +128,44 @@ body {
   margin-bottom: 50px;
 }
 
-#info > .aboutTxt{
-  width: 710px;
-  height: auto;
+#info>.aboutTxt {
+  display: inline-block;
   color: #3c4761;
-  position: relative; left: 20%;
+  position: relative;
+  left: 20%;
   font-family: NanumBarunGothicSubset;
   line-height: 28px;
 }
 
-
-/* 컨텐츠2 */
-
-#portfolio {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffdd99;
-  width: 100%;
-  height: 1962px;
+.aboutTxt>h3 {
+  font-size: 24px;
+  margin-bottom: 35px;
 }
 
-#portfolio > .portfolioTitle{
+.aboutTxt>p {
+  font-size: 18px;
+}
+
+#myskill {
+  display: block;
+  text-align: center;
+}
+
+#myskill>img {
+  position: relative;
+  top: 0;
+  padding: 40px;
+}
+
+/* 컨텐츠2 */
+#portfolio {
+  background-color: #ffdd99;
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+#portfolio>.portfolioTitle {
   text-align: center;
   font-family: NanumSquareEB;
   font-size: 48px;
@@ -148,46 +173,153 @@ body {
   padding: 80px 0 50px 0px;
 }
 
-/* 푸터 */
-
-#footer{
-  display: flex;
-  flex-direction: column;
-  background-color: #324e66;
+#portfolioContentWarp {
   width: 100%;
-  height: 580px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-#footer > .contact{
+#hover{
+  width: 650px;
+  height: 700px;
+  position: relative;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#portfolioContent {
+  width: 650px;
+  height: 700px;
+  background-color: #fff;
+}
+
+#hover:hover .portfolioContentHover{
+  width: 650px;
+}
+
+#hover .portfolioContentHover{
+  width: 0px;
+  height: 700px;
+  background-color: rgba(86, 143, 190, 0.3);
+  position: absolute;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.3s ease-in;
+}
+
+.portfolioContentHover a{
+  color: #3c4761;
+  padding: 25px;
+  background-color: #fff;
+  font-family: NanumSquareEB;
+}
+
+
+#portfolioContent .portfolioContentImg {
+  padding-top: 60px;
+  text-align: center;
+}
+
+#portfolioContent .portfolioContentTxt1, .portfolioContentTxt2, .portfolioContentTxt3, .portfolioContentTxt4 {
+  width: 480px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+#portfolio h3 {
+  color: #3c4761;
+  font-family: NanumSquareEB;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+#portfolio h4 {
+  color: #ff8276;
+  font-family: NanumSquareEB;
+  font-size: 19px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+#portfolio p {
+  color: #3c4761;
+  font-family: NanumBarunGothicSubset;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+/* 푸터 */
+#footer {
+  background-color: #324e66;
+  width: 100%;
+  color: #fff;
+  height: auto;
+}
+
+#footer>.contact {
   text-align: center;
   font-family: NanumSquareEB;
   font-size: 48px;
-  color: #fff;
   padding: 80px 0 50px 0px;
 }
 
-#footer > img{
-  width: 130px;
-  height: auto;
-  margin: 0 auto;
+#footerContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 150px;
 }
 
+#footerContent .footerContentMail, .footerContentPh {
+  padding: 30px;
+}
+
+#footerContent a {
+  color: #fff;
+}
+
+#footerContent a:hover{
+  color: #ffdd99;
+  transition: 1s;
+}
+
+#footer p, img {
+  display: inline-block;
+  font-size: 28px;
+  vertical-align: middle;
+  padding: 5px;
+  font-family: NanumSquareEB;
+}
+
+#footer .logoImg {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
 
 @media (min-width:768px) and (max-width:1024px) {
-  #headerTile{
+  #headerTile {
     width: 100%
   }
 
   #wrapR {
     width: 100%;
   }
-
 }
 
-
 @media (max-width:767px) {
-
-  #headerTile{
+  #headerTile {
     width: 100%
   }
 
@@ -199,5 +331,4 @@ body {
     width: 250px;
     height: auto;
   }
-
 }
