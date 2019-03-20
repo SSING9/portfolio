@@ -70,6 +70,22 @@ body {
   bottom: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: updown 1.5s infinite;
+
+}
+
+@keyframes updown {
+  from{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } to{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 #ScrollDown .ScrollDownClick:hover{
@@ -81,6 +97,9 @@ body {
 .ScrollDownClick {
   color: #fff;
 }
+
+
+
 
 #ScrollDownBar {
   display: block;
@@ -199,16 +218,19 @@ body {
   position: relative;
   cursor: pointer;
   margin: 10px;
+
 }
 
 #portfolioContent {
   width: 650px;
   height: 700px;
   background-color: #fff;
+  border-radius: 20px;
 }
 
 #hover:hover .portfolioContentHover{
   width: 650px;
+  border-radius: 20px;
 }
 
 #hover .portfolioContentHover{
@@ -222,6 +244,7 @@ body {
   align-items: center;
   overflow: hidden;
   transition: 0.3s ease-in;
+  border-radius: 20px;
 }
 
 .portfolioContentHover a{
