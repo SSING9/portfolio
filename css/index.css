@@ -40,13 +40,12 @@ body {
     url("../font/NanumBarunGothicSubset.woff");
 }
 
-
 /* 탑버튼 */
-
-#topBtn{
-  position: fixed; bottom: 20px; right: 20px;
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
-
 
 /* 상단 페이지 시작 */
 #headerTile {
@@ -71,16 +70,17 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   animation: updown 1.5s infinite;
-
 }
 
 @keyframes updown {
-  from{
+  from {
     position: absolute;
     bottom: 50px;
     left: 50%;
     transform: translate(-50%, -50%);
-  } to{
+  }
+
+  to {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -88,18 +88,14 @@ body {
   }
 }
 
-#ScrollDown .ScrollDownClick:hover{
+#ScrollDown .ScrollDownClick:hover {
   color: #ffdd99;
   font-weight: bold;
 }
 
-
 .ScrollDownClick {
   color: #fff;
 }
-
-
-
 
 #ScrollDownBar {
   display: block;
@@ -133,7 +129,7 @@ body {
   transition: all 0.3s;
 }
 
-.myprofile:hover{
+.myprofile:hover {
   transform: scale(1.1);
 }
 
@@ -145,11 +141,19 @@ body {
   padding: 80px 0 50px 0px;
 }
 
-#line {
-  width: 80px;
+#line4 {
+  width: 50px;
   height: 4px;
   margin: 0 auto;
-  background-color: #cad8e2;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+#line1, #line2, #line3 {
+  width: 50px;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #3c4761;
   margin-bottom: 50px;
 }
 
@@ -183,7 +187,7 @@ body {
   transition: all 0.3s;
 }
 
-#myskill>img:hover{
+#myskill>img:hover {
   transform: scale(1.1);
 }
 
@@ -212,13 +216,12 @@ body {
   justify-content: center;
 }
 
-#hover{
+#hover {
   width: 650px;
   height: 700px;
   position: relative;
   cursor: pointer;
   margin: 10px;
-
 }
 
 #portfolioContent {
@@ -228,17 +231,17 @@ body {
   border-radius: 20px;
 }
 
-#hover:hover .portfolioContentHover{
+#hover:hover .portfolioContentHover {
   width: 650px;
   border-radius: 20px;
 }
 
-#hover .portfolioContentHover{
+#hover .portfolioContentHover {
   width: 0px;
   height: 700px;
   background-color: rgba(86, 143, 190, 0.3);
   position: absolute;
-  top:0;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,13 +250,12 @@ body {
   border-radius: 20px;
 }
 
-.portfolioContentHover a{
+.portfolioContentHover a {
   color: #3c4761;
   padding: 25px;
   background-color: #fff;
   font-family: NanumSquareEB;
 }
-
 
 #portfolioContent .portfolioContentImg {
   padding-top: 60px;
@@ -322,7 +324,7 @@ body {
   color: #fff;
 }
 
-#footerContent a:hover{
+#footerContent a:hover {
   color: #ffdd99;
   transition: 1s;
 }
@@ -361,8 +363,7 @@ body {
 }
 
 @media (max-width:767px) {
-
-  #topBtnA{
+  #topBtnA {
     display: none;
   }
 
@@ -397,22 +398,22 @@ body {
     font-size: 16px;
   }
 
-  #hover, #portfolioContent{
+  #hover, #portfolioContent {
     width: 100%;
     height: 510px;
   }
 
-  #hover:hover .portfolioContentHover{
+  #hover:hover .portfolioContentHover {
     width: 100%;
     height: 510px;
   }
 
-  #portfolioContent .portfolioContentTxt1, .portfolioContentTxt2, .portfolioContentTxt3, .portfolioContentTxt4{
+  #portfolioContent .portfolioContentTxt1, .portfolioContentTxt2, .portfolioContentTxt3, .portfolioContentTxt4 {
     width: 90%;
     padding: 10px;
   }
 
-  .portfolioContentImg >img{
+  .portfolioContentImg>img {
     width: 50%;
   }
 
@@ -425,8 +426,7 @@ body {
     padding: 10px;
   }
 
-  #footer p{
+  #footer p {
     font-size: 18px;
   }
-
 }

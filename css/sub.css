@@ -1,0 +1,106 @@
+/* 초기화 */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px
+}
+
+body {
+  background: url("../images/background.png") center no-repeat fixed;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: NanumSquareEB;
+  src: url("../font/NanumSquareEB.ttf"),
+    url("../font/NanumSquareEB.eot"),
+    url("../font/NanumSquareEB.woff");
+}
+
+@font-face {
+  font-family: NanumBarunGothicSubset;
+  src: url("../font/NanumBarunGothicSubset.ttf"),
+    url("../font/NanumBarunGothicSubset.eot"),
+    url("../font/NanumBarunGothicSubset.woff");
+}
+
+/* 탑버튼 */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* 섹션 시작 메인시작 */
+#wrapR {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 푸터 */
+#footer {
+  background-color: #324e66;
+  width: 100%;
+  color: #fff;
+  height: auto;
+}
+
+#footer>.contact {
+  text-align: center;
+  font-family: NanumSquareEB;
+  font-size: 48px;
+  padding: 80px 0 50px 0px;
+}
+
+#footerContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+
+#footerContent .footerContentMail, .footerContentPh {
+  padding: 30px;
+}
+
+#footerContent a {
+  color: #fff;
+}
+
+#footerContent a:hover {
+  color: #ffdd99;
+  transition: 1s;
+}
+
+#footer p, img {
+  display: inline-block;
+  font-size: 28px;
+  vertical-align: middle;
+  padding: 5px;
+  font-family: NanumSquareEB;
+}
+
+#footer .logoImg {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
