@@ -41,10 +41,26 @@ body {
 }
 
 /* 탑버튼 */
+#homeBtn {
+  position: fixed;
+  bottom: 110px;
+  right: 20px;
+  transition: all 0.3s;
+}
+
+#homeBtn:hover{
+  transform: scale(1.1);
+}
+
 #topBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  transition: all 0.3s;
+}
+
+#topBtn:hover{
+  transform: scale(1.1);
 }
 
 /* 섹션 시작 메인시작 */
@@ -52,6 +68,137 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+
+/* 서브 콘텐츠1 시작 */
+#subcontent1 {
+  width: 100%;
+  height: auto;
+  background-color: #ffdd99;
+  margin-top: 100px;
+}
+
+#subcontent1Title {
+  text-align: center;
+  font-family: NanumSquareEB;
+  font-size: 40px;
+  color: #3c4761;
+  padding: 80px 0 50px 0px;
+}
+
+#line1 {
+  width: 50px;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #3c4761;
+  margin-bottom: 50px;
+}
+
+#line2 {
+  width: 50px;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+#secton1flex{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#subcontent1L {
+  width: 50%;
+}
+
+#subcontent1L .apphand {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#subcontent1R {
+  width: 45%;
+  padding-left: 5%;
+}
+
+#subcontent1RWrap {
+  width: 100%;
+}
+
+#subcontent1RWrap .applogo{
+  margin-bottom: 40px;
+}
+
+#subcontent1RTxt {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+#subcontent1RTxt > h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: NanumSquareEB;
+  color: #3c4761;
+}
+
+#subcontent1RTxt > h4{
+  color: #ff8276;
+  font-family: NanumSquareEB;
+  font-size: 19px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+#subcontent1RTxt > p{
+  font-size: 18px;
+  font-family: NanumBarunGothicSubset;
+  color: #3c4761;
+  line-height: 25px;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/* 서브 콘텐츠 2 시작 */
+
+#section2{
+  width: 100%;
+  height: auto;
+  background-color:#fff;
+}
+
+#subcontent2{
+  display: block;
+  text-align: center;
+  padding: 30px;
+}
+
+#subcontent2Title{
+  text-align: center;
+  font-family: NanumSquareEB;
+  font-size: 40px;
+  color: #3c4761;
+  padding: 80px 0 50px 0px;
+}
+
+#subcontent2 img{
+  position: relative;
+  top: 0;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+#subcontent2 img:hover{
+  transform: scale(1.1);
+}
+
+
 
 /* 푸터 */
 #footer {
@@ -94,7 +241,6 @@ body {
   display: inline-block;
   font-size: 28px;
   vertical-align: middle;
-  padding: 5px;
   font-family: NanumSquareEB;
 }
 
@@ -103,4 +249,76 @@ body {
   position: relative;
   left: 50%;
   transform: translate(-50%, -20%);
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  #wrapR {
+    width: 100%;
+    height: auto;
+  }
+
+  #subcontent1Title{
+    font-size: 35px;
+  }
+
+  #subcontent1RTxt{
+    margin-bottom: 20px;
+  }
+
+  .applogo{
+    width: 150px;
+  }
+
+}
+
+@media (max-width:767px) {
+  #wrapR {
+    width: 100%;
+  }
+
+  #homeBtnA, #topBtnA{
+    display: none;
+  }
+
+  #subcontent1L, #subcontent1R{
+    width: 100%
+  }
+
+  #subcontent1Title{
+    font-size: 28px;
+  }
+
+  #subcontent1R{
+    background-color: rgb(228, 214, 179);
+    height: auto;
+  }
+
+  #subcontent1RTxt{
+    width: 100%;
+  }
+
+  .applogo{
+    width: 150px;
+    margin-top: 30px;
+    position: relative; left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #subcontent1RTxt{
+    margin-bottom: 20px;
+  }
+
+  #portfolioContent .portfolioContentImg {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  #footerContent .footerContentMail, .footerContentPh {
+    padding: 10px;
+  }
+
+  #footer p {
+    font-size: 18px;
+  }
+
 }
