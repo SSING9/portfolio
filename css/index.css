@@ -251,7 +251,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease;
   border-radius: 20px;
 }
 
@@ -369,7 +369,7 @@ body {
 }
 
 @media (max-width:767px) {
-  #topBtnA {
+  #topBtn {
     display: none;
   }
 
