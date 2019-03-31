@@ -24,7 +24,6 @@ $(document).ready(function() {
   });
 });
 
-
 $(document).ready(function() {
   $('#topBtnA').hide();
   $(window).scroll(function() {
@@ -35,40 +34,12 @@ $(document).ready(function() {
       $('#topBtnA').fadeOut(500);
     }
   });
-});
-
-$(document).ready(function() {
-  $(window).scroll(function() {
-    var scrollani = $('window').scrollTop();
-    if ($(document).scrollTop() > 100) {
-      $('.about').addClass('animated ' + 'bounceInDown');
-    }
-    if ($(document).scrollTop() > 1000) {
-      $('.skill').addClass('animated ' + 'bounceInLeft');
-    }
-    if ($(document).scrollTop() > 1550) {
-      $('.portfolioTitle').addClass('animated ' + 'zoomIn');
-    }
-    if ($(document).scrollTop() > 3350) {
-      $('.contact').addClass('animated ' + 'tada');
-      $('.phImg').addClass('animated ' + 'tada');
-      $('.emailImg').addClass('animated ' + 'tada');
-    }
-  });
-});
-
-
-$(document).ready(function() {
   $('#topBtnA').click(function(event) {
     event.preventDefault();
     $('html,body').animate({
       scrollTop: $(this.hash).offset().top
     }, 700);
   });
-});
-
-
-$(document).ready(function() {
   $('.ScrollDownClick').click(function(event) {
     event.preventDefault();
     $('html,body').animate({
@@ -77,7 +48,32 @@ $(document).ready(function() {
   });
 });
 
-
+$(document).ready(function() {
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 100) {
+      $('.about').addClass('animated ' + 'bounceInDown');
+    } else {
+      $('.about').removeClass('animated ' + 'bounceInDown');
+    }
+    if ($(document).scrollTop() > 1000) {
+      $('.skill').addClass('animated ' + 'bounceInLeft');
+    } else {
+      $('.skill').removeClass('animated ' + 'bounceInLeft');
+    }
+    if ($(document).scrollTop() > 1550) {
+      $('.portfolioTitle').addClass('animated ' + 'zoomIn');
+    } else {
+      $('.portfolioTitle').removeClass('animated ' + 'zoomIn');
+    }
+    if ($(document).scrollTop() > 3350) {
+      $('.contact').addClass('animated ' + 'tada');
+      $('.phImg').addClass('animated ' + 'tada');
+      $('.emailImg').addClass('animated ' + 'tada');
+    } else {
+      $('.contact').removeClass('animated ' + 'tada');
+    }
+  });
+});
 
 $(document).ready(function() {
   $('#headerTile').hide();

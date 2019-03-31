@@ -54,6 +54,8 @@ $(document).ready(function(){
     var scroll = $(window).scrollTop();
     if( scroll > 110 ){
       $('#subcontent2Title').addClass('animate bounceIn');
+    } else {
+      $('#subcontent2Title').removeClass('animate bounceIn');
     }
   });
 });
