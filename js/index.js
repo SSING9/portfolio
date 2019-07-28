@@ -1,30 +1,14 @@
+
+/* 첫 페이지 페이드인 */
 $(document).ready(function() {
-  $(".animsition").animsition({
-    inClass: 'fade-in-up-sm',
-    outClass: 'fade-out-up-sm',
-    inDuration: 1500,
-    outDuration: 800,
-    linkElement: '.animsition-link',
-    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-    loading: true,
-    loadingParentElement: 'body',
-    loadingClass: 'animsition-loading',
-    timeout: false,
-    timeoutCountdown: 5000,
-    onLoadEvent: true,
-    browser: ['animation-duration', '-webkit-animation-duration'],
-    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-    overlay: false,
-    overlayClass: 'animsition-overlay-slide',
-    overlayParentElement: 'body',
-    transition: function(url) {
-      window.location.href = url;
-    }
-  });
+  $('#headerTile').hide();
+  $('#headerTile').fadeIn(2000);
+  $('#ScrollDown').hide();
+  $('#ScrollDown').fadeIn(3000);
 });
 
 $(document).ready(function() {
+  /* 탑 버튼 */
   $('#topBtnA').hide();
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -34,13 +18,15 @@ $(document).ready(function() {
       $('#topBtnA').fadeOut(500);
     }
   });
+  /* 탑 버튼 클릭 시 부드러운 슬라이드 */
   $('#topBtnA').click(function(event) {
     event.preventDefault();
     $('html,body').animate({
       scrollTop: $(this.hash).offset().top
     }, 700);
   });
-  $('.ScrollDownClick').click(function(event) {
+  /* 스크롤 다운 클릭 시 부드러운 슬라이드 */
+  $('.scrollBtn').click(function(event) {
     event.preventDefault();
     $('html,body').animate({
       scrollTop: $(this.hash).offset().top
@@ -48,43 +34,22 @@ $(document).ready(function() {
   });
 });
 
+/* animate.css 적용 */
 $(document).ready(function() {
   $(window).scroll(function() {
-    if ($(document).scrollTop() > 100) {
+    if ($(document).scrollTop() > $('.titletop').offset().top-100) {
       $('.about').addClass('animated ' + 'bounceInDown');
     } else {
       $('.about').removeClass('animated ' + 'bounceInDown');
     }
-    if ($(document).scrollTop() > 1000) {
-      $('.skill').addClass('animated ' + 'bounceInLeft');
+    if ($(document).scrollTop() > $('.aboutTxt').offset().top-100) {
+      $('.portfolioTit').addClass('animated ' + 'bounceInLeft');
     } else {
-      $('.skill').removeClass('animated ' + 'bounceInLeft');
-    }
-    if ($(document).scrollTop() > 1550) {
-      $('.portfolioTitle').addClass('animated ' + 'zoomIn');
-    } else {
-      $('.portfolioTitle').removeClass('animated ' + 'zoomIn');
-    }
-    if ($(document).scrollTop() > 3350) {
-      $('.contact').addClass('animated ' + 'tada');
-      $('.phImg').addClass('animated ' + 'tada');
-      $('.emailImg').addClass('animated ' + 'tada');
-    } else {
-      $('.contact').removeClass('animated ' + 'tada');
+      $('.portfolioTit').removeClass('animated ' + 'bounceInLeft');
     }
   });
 });
 
-$(document).ready(function() {
-  $('#headerTile').hide();
-  $('#headerTile').fadeIn(2000);
-  $('#ScrollDown').hide();
-  $('#ScrollDown').fadeIn(3000);
-});
 
 
-$(document).ready(function() {
-  $('#wccApp').click(function() {
-    $('sub.html').fadeIn(500);
-  });
-});
+

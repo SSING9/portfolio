@@ -1,438 +1,123 @@
+@charset "utf-8";
+
 /* 초기화 */
-* {
-  margin: 0px;
-  padding: 0px;
-}
+* {margin: 0px; padding: 0px; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {border: 0;}
+button {border: 0; outline: 0;}
+.hidden {position: absolute;left: -9999px}
+body {background: url("../images/background.png") center no-repeat fixed; background-size: cover;}
+h1, h2, h3, h4, h5, p, a {font-family: 'Noto Sans KR', sans-serif; color: #3c4761; font-size: 18px;}
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  border: 0;
-}
-
-.hidden {
-  position: absolute;
-  left: -9999px
-}
-
-body {
-  background: url("../images/background.png") center no-repeat fixed;
-  background-size: cover;
-}
-
-@font-face {
-  font-family: NanumSquareEB;
-  src: url("../font/NanumSquareEB.ttf"),
-    url("../font/NanumSquareEB.eot"),
-    url("../font/NanumSquareEB.woff");
-}
-
-@font-face {
-  font-family: NanumBarunGothicSubset;
-  src: url("../font/NanumBarunGothicSubset.ttf"),
-    url("../font/NanumBarunGothicSubset.eot"),
-    url("../font/NanumBarunGothicSubset.woff");
-}
+/* 
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
 
 /* 탑버튼 */
-#topBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  transition: all 0.3s;
-}
+#topBtn {position: fixed; bottom: 20px; right: 20px; transition: all 0.3s;}
+#topBtn:hover{transform: scale(1.1);}
 
-#topBtn:hover{
-  transform: scale(1.1);
-}
-
-/* 상단 페이지 시작 */
-#headerTile {
-  width: 100%;
-  height: 100vh;
-}
-
-#headerTile .titletop {
-  position: relative;
-  left: 52%;
-  top: 40%;
-  transform: translate(-50%, -50%);
+/* 타이틀 페이지 */
+#headerTitle {position: relative; width: 100%; height: 100vh;}
+#headerTitle .titletop {position: absolute; top: 40%; left: 50%; 
+  transform: translate(-50%, -50%);  animation: logoSilde 1.5s ease-in-out;}
+@keyframes logoSilde {
+  from {
+    position: absolute; top: -50%;
+  }
+  to {
+    position: absolute; top: 40%;
+  }
 }
 
 /* 스크롤 다운 버튼 */
-#ScrollDown>p {
-  display: block;
-  color: #fff;
-  font-size: 16px;
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: updown 1.5s infinite;
-}
-
+#scroll > p {display: block; position: absolute; bottom: 50px; left: 50%;
+  transform: translate(-50%, -50%); color: #fff; font-size: 16px; animation: updown 1s infinite;}
 @keyframes updown {
   from {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; bottom: 50px; 
   }
-
   to {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; bottom: 40px;
   }
 }
+#scroll .scrollBtn {font-family: 'Josefin Sans', sans-serif; color: #fff;}
+#scroll .scrollBtn:hover {color: #ffdd99; transition: all 0.3s ease-in-out;}
+#scrollLine {display: block; position: absolute; bottom: 0; left: 50%; width: 1px; height: 50px; background: #fff;}
 
-#ScrollDown .ScrollDownClick:hover {
-  color: #ffdd99;
-  font-weight: bold;
-}
+/* 콘텐츠 레이아웃 */
+#wrapLayout {margin: 0 auto; width: 90%; text-align: center;}
+.line, .lineDeco {display: inline-block; margin-bottom: 50px;  width: 50px; height: 4px; background: #3c4761;}
+.lineDeco {background: #fff;}
+h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', sans-serif; font-size: 48px; color: #3c4761;}
 
-.ScrollDownClick {
-  color: #fff;
-}
+/* about */
+#info {padding-bottom: 50px; width: 100%; background-color: #fff;}
+#info .myprofile {display: block; padding-bottom: 70px; margin: 0 auto; width: 53vw; transition: all 0.3s;}
+#info .myprofile:hover {transform: scale(1.05);}
+#info .aboutTxt {margin: 0 0 30px 20%; text-align: left;}
+#info .aboutTxt > h3 {margin-bottom: 35px; color: #ff8276; font-size: 24px; font-weight: 500;}
+#info .aboutTxt > p {color: #555; font-weight: 300; line-height: 30px;}
+#info .aboutTxt > p span {color: #ff8276; font-weight: 500;}
 
-#ScrollDownBar {
-  display: block;
-  width: 1px;
-  height: 50px;
-  background-color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-}
+/* careerWrap */
+#info .career {padding: 30px; margin: 0 auto; width: 63%; background: lemonchiffon; border-radius: 20px;}
+#info .career .careerTit {padding: 10px; text-align: left;}
+#info .careerWrap {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center;}
+#info .careerWrap .conts {flex: 50%; text-align: left;}
+#info .careerWrap .conts > div {margin: 15px;}
+#info .careerWrap .conts > div .date {padding-bottom: 5px; color: #ff8276; font-size: 14px; font-weight: 500;}
+#info .careerWrap .conts > div .text {font-weight: 300;}
 
-/* 섹션 시작 메인시작 */
-#wrapR {
-  width: 90%;
-  margin: 0 auto;
-}
-
-/* 컨텐츠1 */
-#info {
-  background-color: #ffffff;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-#info>.myprofile {
-  display: block;
-  margin: 0 auto;
-  width: 53vw;
-  padding-bottom: 70px;
-  transition: all 0.3s;
-}
-
-.myprofile:hover {
-  transform: scale(1.1);
-}
-
-#info>.about, .skill {
-  text-align: center;
-  font-family: NanumSquareEB;
-  font-size: 48px;
-  color: #3c4761;
-  padding: 80px 0 50px 0px;
-}
-
-#line4 {
-  width: 50px;
-  height: 4px;
-  margin: 0 auto;
-  background-color: #fff;
-  margin-bottom: 50px;
-}
-
-#line1, #line2, #line3 {
-  width: 50px;
-  height: 4px;
-  margin: 0 auto;
-  background-color: #3c4761;
-  margin-bottom: 50px;
-}
-
-#info>.aboutTxt {
-  display: inline-block;
-  color: #3c4761;
-  position: relative;
-  left: 20%;
-  font-family: NanumBarunGothicSubset;
-  line-height: 28px;
-}
-
-.aboutTxt>h3 {
-  font-size: 24px;
-  margin-bottom: 35px;
-}
-
-.aboutTxt>p {
-  font-size: 18px;
-}
-
-#myskill {
-  display: block;
-  text-align: center;
-}
-
-#myskill>img {
-  position: relative;
-  top: 0;
-  padding: 40px;
-  transition: all 0.3s;
-}
-
-#myskill>img:hover {
-  transform: scale(1.1);
-}
-
-/* 컨텐츠2 */
-#portfolio {
-  background-color: #ffdd99;
-  width: 100%;
-  height: auto;
-  padding-bottom: 50px;
-}
-
-#portfolio>.portfolioTitle {
-  text-align: center;
-  font-family: NanumSquareEB;
-  font-size: 48px;
-  color: #3c4761;
-  padding: 80px 0 50px 0px;
-}
-
-#portfolioContentWarp {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-#hover {
-  width: 650px;
-  height: 700px;
-  position: relative;
-  cursor: pointer;
-  margin: 10px;
-}
-
-#portfolioContent {
-  width: 650px;
-  height: 700px;
-  background-color: #fff;
-  border-radius: 20px;
-}
-
-#hover:hover .portfolioContentHover {
-  width: 650px;
-  border-radius: 20px;
-}
-
-#hover .portfolioContentHover {
-  width: 0px;
-  height: 700px;
-  background-color: rgba(86, 143, 190, 0.3);
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: 0.3s ease;
-  border-radius: 20px;
-}
-
-.portfolioContentHover a {
-  color: #3c4761;
-  padding: 25px;
-  background-color: #fff;
-  font-family: NanumSquareEB;
-  border-radius: 20px;
-}
-
-#portfolioContent .portfolioContentImg {
-  padding-top: 60px;
-  text-align: center;
-}
-
-#portfolioContent .portfolioContentTxt1, .portfolioContentTxt2, .portfolioContentTxt3, .portfolioContentTxt4 {
-  width: 480px;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-#portfolio h3 {
-  color: #3c4761;
-  font-family: NanumSquareEB;
-  font-size: 30px;
-  padding-bottom: 20px;
-}
-
-#portfolio h4 {
-  color: #ff8276;
-  font-family: NanumSquareEB;
-  font-size: 19px;
-  font-weight: bold;
-  padding-bottom: 10px;
-}
-
-#portfolio p {
-  color: #3c4761;
-  font-family: NanumBarunGothicSubset;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: justify;
-}
+/* portfolio */
+#portfolio {padding-bottom: 50px; width: 100%; background: #ffdd99;}
+#portfolioWarp {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; width: 100%;}
+#portfolio .layout {overflow: hidden; position: relative; margin: 10px; width: 650px; height: 300px; border-radius: 20px;}
+#portfolio .layout .contents {width: 650px; height: 300px; background-color: #fff;} /* 추후배경색 제거 */
+#portfolio .layout .contents img {transition: all 0.5s ease-in-out;}
+#portfolio .layout .contents:hover img {transform: scale(1.2); transition: all 0.5s ease-in-out;}
+#portfolio .layout .contents .txtWrap {overflow: hidden; position: absolute; bottom: 0; width: 100%; height: 50px; background: rgba(0, 0, 0, .4); transition: all .3s ease-in-out;}
+#portfolio .layout .contents .txtWrap > h3 {color: #fff; font-size: 20px; font-weight: 400; line-height: 50px; transition: all .3s ease-in-out;}
+#portfolio .layout .contents .txtWrap .siteBtn {display: inline-block; padding: 10px; margin-top: 10px; border: 1px solid #fff; border-radius: 5px; transition: all .3s ease-in-out;}
+#portfolio .layout .contents .txtWrap .siteBtn:hover {background: #fff; transition: all .3s ease-in-out;}
+#portfolio .layout .contents .txtWrap .siteBtn > a {color: #fff; font-weight: 400;}
+#portfolio .layout .contents .txtWrap .siteBtn:hover > a {color: #000;}
+#portfolio .layout .contents:hover .txtWrap {height: 100%; background: rgba(0, 0, 0, .8); transition: all .3s ease-in-out;}
+#portfolio .layout .contents:hover .txtWrap > h3 {margin-top: 100px; font-size: 25px; transition: all .3s ease-in-out;}
 
 /* 푸터 */
-#footer {
-  background-color: #324e66;
-  width: 100%;
-  color: #fff;
-  height: auto;
+#footer {background: #324e66;}
+#footer > h2 {color: #fff;}
+#footerWrap {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; margin-bottom: 50px;}
+#footerWrap > .email, .phone {padding: 30px;}
+#footerWrap .email a {padding: 10px; color: #fff; font-weight: 400; transition: 1s;}
+#footerWrap .email:hover a {color: #ffdd99; transition: 1s;}
+#footerWrap .phone p {padding: 5px; color: #fff; font-weight: 400;}
+
+#footer .logoImg {display: inline-block; padding-bottom: 20px;}
+
+
+@media screen and (max-width:1024px) {
+  #wrapLayout {width: 100%;}
+  #info > .myprofile {width: 95%;}
+  #info > .aboutTxt {margin-left: 5%;}
+  #info .career {width: 100%;}
 }
 
-#footer>.contact {
-  text-align: center;
-  font-family: NanumSquareEB;
-  font-size: 48px;
-  padding: 80px 0 50px 0px;
+@media screen and (max-width:767px) {
+  #wrapLayout {width: 100%;}
+  #topBtn {display: none;}
+  #headerTitle {width: 100%}
+  #info > .myprofile {width: 95%;}
+  #info > .aboutTxt {margin: 15px;}
+  #info .aboutTxt > h3 {font-size: 20px;}
+  #info .aboutTxt > p {font-size: 16px;}
 }
 
-#footerContent {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 150px;
-}
-
-#footerContent .footerContentMail, .footerContentPh {
-  padding: 30px;
-}
-
-#footerContent a {
-  color: #fff;
-}
-
-#footerContent a:hover {
-  color: #ffdd99;
-  transition: 1s;
-}
-
-#footer p, img {
-  display: inline-block;
-  font-size: 28px;
-  vertical-align: middle;
-  padding: 5px;
-  font-family: NanumSquareEB;
-}
-
-#footer .logoImg {
-  display: inline-block;
-  position: relative;
-  left: 50%;
-  transform: translate(-45%, -20%);
-}
-
-@media (min-width:768px) and (max-width:1024px) {
-  #headerTile {
-    width: 100%;
-  }
-
-  #wrapR {
-    width: 100%;
-  }
-
-  #info>.myprofile {
-    width: 95%;
-  }
-
-  #info>.aboutTxt {
-    left: 10%;
-  }
-}
-
-@media (max-width:767px) {
-  #topBtn {
-    display: none;
-  }
-
-  #headerTile {
-    width: 100%
-  }
-
-  .titletop {
-    width: 250px;
-    height: auto;
-  }
-
-  #wrapR {
-    width: 100%;
-  }
-
-  #info>.myprofile {
-    width: 95%;
-  }
-
-  #info>.aboutTxt {
-    left: 0;
-    margin: 15px;
-    justify-content: center;
-  }
-
-  .aboutTxt>h3 {
-    font-size: 20px;
-  }
-
-  .aboutTxt>p {
-    font-size: 16px;
-  }
-
-  #hover, #portfolioContent {
-    width: 100%;
-    height: 510px;
-  }
-
-  #hover:hover .portfolioContentHover {
-    width: 100%;
-    height: 510px;
-  }
-
-  #portfolioContent .portfolioContentTxt1, .portfolioContentTxt2, .portfolioContentTxt3, .portfolioContentTxt4 {
-    width: 90%;
-    padding: 10px;
-  }
-
-  .portfolioContentImg>img {
-    width: 50%;
-  }
-
-  #portfolioContent .portfolioContentImg {
-    width: 100%;
-    padding-top: 10px;
-  }
-
-  #footerContent .footerContentMail, .footerContentPh {
-    padding: 10px;
-  }
-
-  #footer p {
-    font-size: 18px;
-  }
+@media screen and (max-width:650px) {
+  #headerTitle .titletop {width: 300px;}
+  #portfolio .layout {width: 100%;}
+  #info .careerWrap {display: inline-block;}
 }
