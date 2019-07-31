@@ -85,7 +85,7 @@ h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', s
 #portfolio .layout .contents .txtWrap .siteBtn > a {color: #fff; font-weight: 400;}
 #portfolio .layout .contents .txtWrap .siteBtn:hover > a {color: #000;}
 #portfolio .layout .contents:hover .txtWrap {height: 100%; background: rgba(0, 0, 0, .8); transition: all .3s ease-in-out;}
-#portfolio .layout .contents:hover .txtWrap > h3 {margin-top: 100px; font-size: 25px; transition: all .3s ease-in-out;}
+#portfolio .layout .contents:hover .txtWrap > h3 {margin-top: 100px; color: #ffdd99; font-size: 25px; transition: all .3s ease-in-out;}
 
 /* 푸터 */
 #footer {background: #324e66;}
@@ -94,7 +94,8 @@ h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', s
 #footerWrap > .email, .phone {padding: 30px;}
 #footerWrap .email a {padding: 10px; color: #fff; font-weight: 400; transition: 1s;}
 #footerWrap .email:hover a {color: #ffdd99; transition: 1s;}
-#footerWrap .phone p {padding: 5px; color: #fff; font-weight: 400;}
+#footerWrap .phone p {padding: 5px; color: #fff; font-weight: 400; transition: 1s;}
+#footerWrap .phone:hover p {color: #ffdd99; transition: 1s;}
 
 #footer .logoImg {display: inline-block; padding-bottom: 20px;}
 
