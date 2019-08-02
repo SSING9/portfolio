@@ -76,7 +76,7 @@ h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', s
 #portfolio {padding-bottom: 50px; width: 100%; background: #ffdd99;}
 #portfolioWarp {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; width: 100%;}
 #portfolio .layout {overflow: hidden; position: relative; margin: 10px; width: 650px; height: 300px; border-radius: 20px;}
-#portfolio .layout .contents {width: 650px; height: 300px; background-color: #fff;} /* 추후배경색 제거 */
+#portfolio .layout .contents {width: 650px; height: 300px;} 
 #portfolio .layout .contents img {transition: all 0.5s ease-in-out;}
 #portfolio .layout .contents:hover img {transform: scale(1.2); transition: all 0.5s ease-in-out;}
 #portfolio .layout .contents .txtWrap {overflow: hidden; position: absolute; bottom: 0; width: 100%; height: 50px; background: rgba(0, 0, 0, .4); transition: all .3s ease-in-out;}
