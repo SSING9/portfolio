@@ -35,10 +35,18 @@
         <img class="myprofile" src="images/myprofile.png" alt="개인프로필 사진">
         <div class="aboutTxt">
           <h3>저의 포트폴리오 홈페이지에 방문해 주셔서 감사합니다. :)</h3>
-          <p>안녕하세요? 더욱 나은 웹사이트 제작을 위해 노력하는 <span>‘SSING9(심현규)’</span>입니다.</p>
+          <p>안녕하세요? 더욱 나은 웹사이트 제작을 위해 노력하는 <a href="#ssing9" rel="modal:open"><span>*SSING9(심현규)</span></a>입니다.</p>
           <p>‘어떻게 하면 더 좋은 웹사이트를 만들까?’, ‘어떻게 하면 완성도 높은 결과가 나올까?’ 고민합니다.</p>
           <p>스스로 개발하고 디자인하며 클라이언트가 만족할만한 웹사이트를 구현하려 노력 중입니다.</p>
         </div>
+        
+        <!-- ssing9 설명 모달창 -->
+        <div id="ssing9"" class="modal">
+          <p><img src="images/ssing9.jpg" alt="별명 설명"></p>
+          <br>
+          <p>SSING9는 대학 시절 저의 별명이었던 ‘싱(ssing)’과 ‘현9’를 합친 의미로써, 저 자신을 브랜드화하여 나타냈고 사람들에게 알리고자 하였습니다. </p>
+        </div>
+        <!-- 모달창 끝 -->
 
         <div class="career">
           <p class="careerTit">· 항상 새로운 것을 배우려 노력하고, 공부하고 있습니다.</p>
@@ -170,14 +178,21 @@
           <p>+82 10-8863-1234</p>
         </div>
       </div>
-      
+      <p>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" />
+        </a>
+      </p>
+      <br>
       <div class="logoImg">
-        <img class="logo" src="images/footerlogo.png" alt="">
+        <img class="logo" src="images/footerlogo.png" alt="푸터로고">
       </div>
     </footer>
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> 
   <script src="js/index.js"></script>
 </body>
 </html>
