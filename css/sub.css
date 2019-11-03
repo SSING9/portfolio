@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {margin: 0px; padding: 0px; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {border: 0;}
+button {border: 0; outline: 0;}
+.hidden {position: absolute;left: -9999px}
+body {background: url("../images/background.png") center no-repeat fixed; background-size: cover;}
+h1, h2, h3, h4, h5, p, a {font-family: 'Noto Sans KR', sans-serif; color: #3c4761; font-size: 18px;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {display: block;}
+
+/* 
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+
+
+/* 콘텐츠 레이아웃 */
+#wrapLayout {margin: 0 auto; width: 90%; text-align: center;}
+.line, .lineDeco {display: inline-block; margin-bottom: 50px;  width: 50px; height: 4px; background: #3c4761;}
+.lineDeco {background: #fff;}
+h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', sans-serif; font-size: 48px; color: #3c4761;}
+
+/* about */
+#portfolio {margin-top: 100px;}
+#info {padding-bottom: 50px; width: 100%; background-color: #fff;}
+
+/* 푸터 */
+#footer {background: #324e66;}
+#footer > h2 {color: #fff;}
+#footerWrap {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; margin-bottom: 50px;}
+#footerWrap > .email, .phone {padding: 30px;}
+#footerWrap .email a {padding: 10px; color: #fff; font-weight: 400; transition: 1s;}
+#footerWrap .email:hover a {color: #ffdd99; transition: 1s;}
+#footerWrap .phone p {padding: 5px; color: #fff; font-weight: 400; transition: 1s;}
+#footerWrap .phone:hover p {color: #ffdd99; transition: 1s;}
+
+#footer .logoImg {display: inline-block; padding-bottom: 20px;}
+
+
+@media screen and (max-width:1024px) {
+  #wrapLayout {width: 100%;}
+  #info > .myprofile {width: 95%;}
+  #info > .aboutTxt {margin-left: 5%;}
+  #info .career {width: 100%;}
+}
+
+@media screen and (max-width:767px) {
+  #wrapLayout {width: 100%;}
+  #topBtn {display: none;}
+  #headerTitle {width: 100%}
+  #info > .myprofile {width: 95%;}
+  #info > .aboutTxt {margin: 15px;}
+  #info .aboutTxt > h3 {font-size: 20px;}
+  #info .aboutTxt > p {font-size: 16px;}
+}
+
+@media screen and (max-width:650px) {
+  #headerTitle .titletop {width: 300px;}
+  #portfolio .layout {width: 100%;}
+  #info .careerWrap {display: inline-block;}
+}

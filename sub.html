@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0">
+  <meta name="keywords" content="포트폴리오, portfolio">
+  <meta name="description" content="심현규(SSING9의 포트폴리오 사이트 입니다. 방문 감사합니다.">
+  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/lightgallery.css">
+  <link rel="shortcut icon" href="pb.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500&display=swap&subset=korean" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">
+  <title>SSING9의 포트폴리오</title>
+
+  <!-- HTML5shiv ie6~8 -->
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <script type="text/javascript">
+      alert("현재 사용하고 계시는 브라우저는 지원하지 않습니다. 최신 IE로 업데이트 하거나 크롬과 같은 브라우저로 접속해주세요");
+    </script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- 타이틀 페이지 -->
+  <a id="topBtnA" href="#headerTitle"><img id="topBtn" src="images/topWre.png" alt="TOP버튼"></a>
+
+  <!-- 콘텐츠 시작 -->
+  <div id="wrapLayout">
+    <a href="index.html"><h2>HOME</h2></a>
+    <section id="portfolio">
+      <div id="info">
+        <!-- 포트폴리오 소개 -->
+        <h2 class="portfolio">Portfolio</h2>
+        <div class="line"></div>
+        
+        <div id="lightgallery">
+          <a href="images/banner1.jpg">
+            <img src="images/banner_min1.jpg" />
+          </a>
+          <a href="images/banner2.jpg">
+            <img src="images/banner_min2.jpg" />
+          </a>
+          <a href="images/banner3.jpg">
+            <img src="images/banner_min3.jpg" />
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 푸터 시작 -->
+    <footer id="footer">
+      <h2 class="contact">Contact</h2>
+      <div class="lineDeco"></div>
+      <div id="footerWrap">
+        <div class="email">
+          <img class="emailImg" src="images/email.png" alt="">
+          <p><a href="mailto:shk9033@gmail.com">shk9033@gmail.com</a></p>
+        </div>
+        <div class="phone">
+          <img class="phoneImg" src="images/ph.png" alt="">
+          <p>+82 10-8863-1234</p>
+        </div>
+      </div>
+      <div class="logoImg">
+        <img class="logo" src="images/footerlogo.png" alt="푸터로고">
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="js/prefixfree.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/lightgallery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+    });
+  </script>
+</body>
+
+</html>

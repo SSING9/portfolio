@@ -9,6 +9,7 @@ button {border: 0; outline: 0;}
 .hidden {position: absolute;left: -9999px}
 body {background: url("../images/background.png") center no-repeat fixed; background-size: cover;}
 h1, h2, h3, h4, h5, p, a {font-family: 'Noto Sans KR', sans-serif; color: #3c4761; font-size: 18px;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {display: block;}
 
 /* 
 font-family: 'Josefin Sans', sans-serif;
