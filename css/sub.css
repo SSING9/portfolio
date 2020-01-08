@@ -32,19 +32,19 @@ h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', s
 #footer {background: #324e66;}
 #footer > h2 {color: #fff;}
 #footerWrap {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; margin-bottom: 50px;}
-#footerWrap > .email, .phone {padding: 30px;}
-#footerWrap .email a {padding: 10px; color: #fff; font-weight: 400; transition: 1s;}
-#footerWrap .email:hover a {color: #ffdd99; transition: 1s;}
-#footerWrap .phone p {padding: 5px; color: #fff; font-weight: 400; transition: 1s;}
-#footerWrap .phone:hover p {color: #ffdd99; transition: 1s;}
+.email, .phone {padding: 30px;}
+.email a {padding: 10px; color: #fff; font-weight: 400; transition: 1s;}
+.email:hover a {color: #ffdd99; transition: 1s;}
+.phone p {padding: 5px; color: #fff; font-weight: 400; transition: 1s;}
+.phone:hover p {color: #ffdd99; transition: 1s;}
+.footer-logo {display: inline-block; padding-bottom: 20px;}
 
-#footer .logoImg {display: inline-block; padding-bottom: 20px;}
 
-
+/* 반응형 */
 @media screen and (max-width:1024px) {
   #wrapLayout {width: 100%;}
   #info > .myprofile {width: 95%;}
-  #info > .aboutTxt {margin-left: 5%;}
+  #info > .about-txt {margin-left: 5%;}
   #info .career {width: 100%;}
 }
 
@@ -53,15 +53,17 @@ h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', s
   #topBtn {display: none;}
   #headerTitle {width: 100%}
   #info > .myprofile {width: 95%;}
-  #info > .aboutTxt {margin: 15px;}
-  #info .aboutTxt > h3 {font-size: 20px;}
-  #info .aboutTxt > p {font-size: 16px;}
+  #info > .about-txt {margin: 15px;}
+  #info .about-txt > h3 {font-size: 20px;}
+  #info .about-txt > p {font-size: 16px;}
+  #info .career {border-radius: 0;}
 }
 
 @media screen and (max-width:650px) {
   #wrapLayout {width: 100%;}
   #topBtn {display: none;}
   #headerTitle .titletop {width: 300px;}
-  #portfolio .layout {width: 100%;}
-  #info .careerWrap {display: inline-block;}
+  #portfolio .portfolio__contents {width: 100%;}
+  #info .career-conts {flex: 100%;}
+  #info .career {border-radius: 0;}
 }
