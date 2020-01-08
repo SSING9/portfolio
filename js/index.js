@@ -42,10 +42,10 @@ $(document).ready(function() {
     } else {
       $('.about').removeClass('animated ' + 'bounceInDown');
     }
-    if ($(document).scrollTop() > $('.aboutTxt').offset().top-100) {
-      $('.portfolioTit').addClass('animated ' + 'bounceInLeft');
+    if ($(document).scrollTop() > $('.about-txt').offset().top-100) {
+      $('.portfolio-tit').addClass('animated ' + 'bounceInLeft');
     } else {
-      $('.portfolioTit').removeClass('animated ' + 'bounceInLeft');
+      $('.portfolio-tit').removeClass('animated ' + 'bounceInLeft');
     }
   });
 });
