@@ -54,6 +54,10 @@ font-family: 'Noto Sans KR', sans-serif;
 .lineDeco {background: #fff;}
 h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', sans-serif; font-size: 48px; color: #3c4761;}
 
+/* flexbox 클래스 & 벤더 프리픽스 적용 */
+.flex_box {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; 
+  display: -ms-flexbox; -ms-flex-direction: row; -ms-flex-wrap: wrap; -ms-align-items: center; -ms-justify-content: center;}
+
 /* about */
 #info {padding-bottom: 50px; width: 100%; background-color: #fff;}
 .myprofile {display: block; padding-bottom: 70px; margin: 0 auto; width: 53vw; transition: all 0.3s;}
@@ -67,7 +71,6 @@ h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', s
 /* careerWrap */
 .career {padding: 30px; margin: 0 auto; width: 63%; background: lemonchiffon; border-radius: 20px;}
 .career .career-tit {padding: 10px; text-align: left;}
-.career-wrap {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center;}
 .career-wrap .career-conts {flex: 50%; text-align: left;}
 .career-wrap .career-conts > div {margin: 15px;}
 .career-wrap .career-date {padding-bottom: 5px; color: #ff8276; font-size: 14px; font-weight: 500;}
@@ -75,7 +78,7 @@ h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', s
 
 /* portfolio */
 #portfolio {padding-bottom: 50px; width: 100%; background: #ffdd99;}
-#portfolioWarp {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; width: 100%;}
+#portfolioWarp {width: 100%;}
 .portfolio__contents {overflow: hidden; position: relative; margin: 10px; width: 650px; height: 300px; border-radius: 20px;}
 .portfolio__contents-layout {width: 650px; height: 300px;} 
 .portfolio__contents-layout img {transition: all 0.5s ease-in-out;}
@@ -92,7 +95,7 @@ h2 {padding: 80px 0 20px 0px; text-align: center; font-family: 'Josefin Sans', s
 /* 푸터 */
 #footer {background: #324e66;}
 #footer > h2 {color: #fff;}
-#footerWrap {display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; margin-bottom: 50px;}
+#footerWrap {margin-bottom: 50px;}
 .email, .phone {padding: 30px;}
 .email a {padding: 10px; color: #fff; font-weight: 400; transition: 1s;}
 .email:hover a {color: #ffdd99; transition: 1s;}
